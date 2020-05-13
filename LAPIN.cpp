@@ -5,6 +5,11 @@ int main(){
 	cin>>t;
 	while(t--)
 	{
+	int j,n,count1=0;
+	cin>>n;
+	j=n;
+	while(n--)
+	{
 	string s;
 	cin>>s;
 	int l,h;
@@ -24,11 +29,17 @@ int main(){
 	}
 	if(l>=h)
 	{
-		cout<<"wins\n";
+		count1++;
+	}
+}
+	
+	if(count1==j)
+	{
+		cout<<"1\n";
 	}
 	else
 	{
-		cout<<"losses\n";
+		cout<<"0\n";
 	}
 	}
 }
