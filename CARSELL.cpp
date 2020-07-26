@@ -14,30 +14,6 @@ int main()
 		cin>>a[i];
 		a[i]=a[i]%M;
 	}
-	
-	/*
-	for (i=0;i<n;i++)
-	{     
-    for (j=0;j<n-i;j++)
-    {  
-        if(a[j]<a[j+1])
-        {   
-            temp=a[j];
-			a[j]=a[j+1];
-			a[j+1]=temp; 
-        }
-    }
-	}
-	sort(a,a+n,greater<int>());	
-	sum=0;
-	for(x=0;x<n;x++)
-	{
-		if(a[x]!=0 && (a[x]-x)>=0)
-		{
-			sum=(sum+(a[x]-x))%M;
-		}
-	}
-	*/
 	sort(a,a+n,greater<int>());	
 	sum=0;
 	for(x=0;x<n;x++)
@@ -46,7 +22,8 @@ int main()
 		{	z=a[x]-x;
 			if(z>=0)
 			{
-			sum=(sum+z)%M;
+			sum+=z;
+			sum%=M;
 			}
 		}
 	}	
