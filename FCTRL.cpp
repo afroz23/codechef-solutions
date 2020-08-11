@@ -12,7 +12,7 @@ int main()
 		while(n/c!=0)
 		{
 			sum=sum+(n/c);
-			c=c*5;
+			c*=5;
 		}
 		cout<<sum<<endl;
 	}
